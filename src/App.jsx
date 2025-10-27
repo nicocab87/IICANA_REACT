@@ -5,6 +5,7 @@ import Alumnos from "./pages/alumnos";
 import Layout from "./components/layout";
 import Cursos from "./pages/cursos";
 import CursoDetalle from "./pages/CursoDetalle";
+import InscripcionAlumno from "./pages/inscripcionAlumnos";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/alumnos" element={<Alumnos />} /> 
+          <Route path="/alumnos/nuevo" element={<InscripcionAlumno />} /> 
           <Route path="/cursos" element={<Cursos />} />
           <Route path="/cursos/:id" element={<CursoDetalle/>} />
         </Route>

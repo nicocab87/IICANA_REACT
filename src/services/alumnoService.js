@@ -12,8 +12,8 @@ export const getAlumnos = async ()=>{
     return response.data
 };
 
-export const crearAlumno = async (venta)=>{
-    const response = await axios.post(apiUrl, venta);
+export const crearAlumno = async (alumno)=>{
+    const response = await axios.post(apiUrl, alumno);
     return response.data
 };
 

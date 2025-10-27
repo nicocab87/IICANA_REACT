@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Outlet, Link } from 'react-router-dom';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 function Layout() {
     return (
@@ -31,6 +32,7 @@ function Layout() {
                 
             </Nav>
             <Avatar label="D" style={{ backgroundColor: '#9c27b0', color: '#ffffff' }} />
+            <AiOutlineMenu className="m-2" />
             </Navbar.Collapse>
         </Container>
         </Navbar>
