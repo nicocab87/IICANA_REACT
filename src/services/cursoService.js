@@ -7,6 +7,11 @@ export const getCursoById = async (id)=>{
     return response.data
 };
 
+export const getAlumnosPorCurso = async (id)=>{
+    const response = await axios.get(`${apiUrl}/${id}/alumnos`);
+    return response.data
+};
+
 export const getCurso = async ()=>{
     const response = await axios.get(apiUrl);
     return response.data
@@ -22,7 +27,7 @@ export const ModificarCurso = async (id)=>{
     return response.data
 };
 
-export const eleminarCurso = async (id)=>{
+export const eliminarCurso = async (id)=>{
     const response = await axios.put(`${apiUrl}/${id}`);
     return response.data
 };

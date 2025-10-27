@@ -3,6 +3,7 @@ import { getCurso } from "../services/cursoService";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Cursos() {
 
@@ -12,7 +13,6 @@ export default function Cursos() {
     const fetchData = async () => {
     try {
         const data = await getCurso();
-        console.log("data", data)
         setCursos(data);
     } catch (error) {
         console.error("Error al traer alumnos:", error);
@@ -21,6 +21,7 @@ export default function Cursos() {
     fetchData();
 }, []);
 
+const navigate = useNavigate();
 
     return (
     <div className='divPrincipalVenta'>
@@ -32,11 +33,11 @@ export default function Cursos() {
                 <Column field="AñoLectivo" header="Año" />
                 <Column 
     body={(rowData) => (
-    <Button 
-        onClick={() => console.log(rowData)} 
-        label="Ver Curso" 
-        severity="help"
-    />
+    <Button
+                        label="Ver Alumnos"
+                        onClick={() => navigate(`/cursos/${rowData.Id}`)}
+                        severity="info"
+                    />
     )} 
     header="Editar" 
 />
