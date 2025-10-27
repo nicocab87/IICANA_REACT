@@ -1,0 +1,15 @@
+/* Achica el botón principal */
+.small-circle-dial.p-speeddial-button {
+  transform: scale(0.7);
+}
+
+/* Achica los íconos desplegados */
+.small-circle-wrapper .p-speeddial-list {
+  transform: scale(0.85);
+  transform-origin: center;
+}
+
+/* Evita que se corte visualmente si el menú se despliega */
+.small-circle-wrapper {
+  overflow: visible !important;
+}

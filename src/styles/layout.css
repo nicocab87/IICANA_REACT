@@ -1,0 +1,60 @@
+@import url("../index.css");
+
+.layout-container {
+    display: flex;
+    flex-direction:column;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #f8f9fa;
+    padding-top: 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-right: 1px solid #dee2e6;
+    z-index: 1000;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    background-color: var(--color-azul);
+}
+
+/* Espaciado entre links */
+.nav-spacing {
+    margin-bottom: 5px;
+}
+
+/* Para resaltar el link activo */
+.sidebar .nav-link.active {
+    background-color: #0d6efd;
+    color: var(--color-blanco);
+    border-radius: 4px;
+}
+
+/* Estilo base opcional */
+.sidebar .nav-link {
+    color: #212529;
+    transition: background-color 0.2s;
+    font-size: 20px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #cfd1d2;
+    color: #0d6efd;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 2rem;
+    flex-grow: 1;
+    background-color: var(--color-blanco);
+    height: 100vh;
+    overflow-y: auto;
+}
