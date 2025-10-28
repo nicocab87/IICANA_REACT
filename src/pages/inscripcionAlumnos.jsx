@@ -63,7 +63,7 @@ const nuevaDireccion = async()=>{
     console.log(direcciones,"Direcciones")
     console.log(dire,"dire")
 
-
+    console.log(alumno.curso.Id, "id Curso")
     const payload = {
         Dni: alumno.dni,
         Nombre: alumno.nombre,
